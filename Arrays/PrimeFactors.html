@@ -1,0 +1,21 @@
+<html>
+<script>
+    let number = window.prompt("Enter a number: ");
+    let primeFactors = [];
+    let count;
+    for (let factor = 2; factor <= number; factor++) {
+        count = 0;
+        if (number % factor == 0) {
+            for (let prime = 2; prime < factor; prime++) {
+                if (factor % prime == 0) {
+                    count = 1;
+                }
+            }
+            if (count == 0) {
+                primeFactors.push(factor)
+            }
+        }
+    }
+    alert("Prime factors of " + number + " are " + primeFactors);
+</script>
+</html>

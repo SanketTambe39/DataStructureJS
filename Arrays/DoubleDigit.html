@@ -1,0 +1,17 @@
+<html>
+<script>
+    let start = window.prompt("Enter start of range: ");
+    let end = window.prompt("Enter end of range: ");
+    let doubleDigits = [];
+
+    for (let number = start; number <= end; number++) {
+        let quotient = parseInt(number / 10);
+        let remainder = number % 10;
+
+        if (quotient == remainder && number != 0) {
+            doubleDigits.push(number);
+        }
+    }
+    alert("The double digits between " + start + " and " + end + " are " + doubleDigits);
+</script>
+</html>
